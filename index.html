@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Palette Picker</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <div class="container">
+        <h1 class="title">Palette Picker</h1>
+        <p class="desc">Generate Some Awesome Palettes</p>
+        <div class="search">
+            <div class="code">
+                <input type="text" id="search-input" value="skyblue" placeholder="Color code or name" />
+                <span class="search-color"></span>
+            </div>
+            <label class="image" for="search-image">
+                <i class="bx bxs-image"></i>
+                <input type="file" id="search-image" hidden />
+            </label>
+        </div>
+        <div class="options">
+            <select name="" id="palette-type">
+                <option value="analogous">Analogous</option>
+                <option value="monochromatic">Monochromatic</option>
+                <option value="triadic">Triadic</option>
+                <option value="compound">Compound</option>
+                <option value="shades">Shades</option>
+                <option value="tetradic">Tetradic</option>
+                <option value="square">Square</option>
+            </select>
+            <select name="" id="palette-count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+        </div>
+        <div class="or" id="random-btn">Or Generate Random Colors</div>
+
+        <p class="label" id="type-text">Analogous Palette</p>
+        <div class="palette" id="palette">
+        </div>
+        <p class="label">Related Colors</p>
+        <div class="palette" id="related">
+        </div>
+
+        <div class="image-colors-wrapper hidden">
+            <p class="label">Image Colors</p>
+            <div class="palette" id="image-colors"></div>
+        </div>
+
+        <div class="or">Download Palette</div>
+        <div class="options">
+            <input type="text" id="download-name" placeholder="filename" />
+        </div>
+        <div class="options">
+            <select name="" id="download-format">
+                <option value="png">PNG</option>
+                <option value="svg">SVG</option>
+                <option value="css">CSS</option>
+                <option value="json">Json</option>
+            </select>
+            <button class="btn" id="download-btn">Download</button>
+        </div>
+
+        <div class="toast">Toast Message</div>
+
+        <label for="toggle" class="switch">
+            <input type="checkbox" id="toggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <!-- IMAGE COLOR EXTRACTOR -->
+    <script src="https://unpkg.com/color.js@1.2.0/dist/color.js"></script>
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
