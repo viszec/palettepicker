@@ -11,4 +11,4 @@ Welcome to Palette Picker! This project allows you to generate, manage, and sele
 - **Responsive Design**: Works well on both desktop and mobile devices.
 
 ## Demo
-[Live Demo](https://viszec.github.io/nestease/)
+[Live Demo](https://viszec.github.io/palettepicker/)
